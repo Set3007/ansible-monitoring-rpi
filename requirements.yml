@@ -1,0 +1,15 @@
+---
+- src: git@github.com:cloudalchemy/ansible-prometheus.git
+  scm: git
+  version: "master"
+  name: "prometheus"
+
+- src: git@github.com:cloudalchemy/ansible-node-exporter.git 
+  scm: git
+  version: "master"
+  name: "node-exporter"
+
+- src: git@github.com:cloudalchemy/ansible-grafana.git
+  scm: git
+  version: "master"
+  name: "grafana"

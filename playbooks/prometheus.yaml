@@ -1,0 +1,10 @@
+---
+- hosts: raspberrypi-mona
+  roles:
+  - prometheus
+  vars:
+    prometheus_storage_retention : 1y
+    prometheus_targets:
+      node:
+      - targets:
+        - localhost:9100
