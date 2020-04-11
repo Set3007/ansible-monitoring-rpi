@@ -1,0 +1,11 @@
+groups:
+  - name: count_times_eating
+    interval: 1d
+    rules:
+    - record: count_monaeating
+      expr: changes(monaeating[1d]) / 2
+  - name: amount_times_seconds_eating
+    interval: 1d
+    rules:
+    - record: amount_monaeating_in_seconds
+      expr: sum_over_time(monaeating[1d])

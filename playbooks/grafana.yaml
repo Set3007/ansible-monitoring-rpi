@@ -1,6 +1,7 @@
 ---
 - hosts: raspberrypi-mona
   roles:
+    - copy-files
     - grafana
   vars:
     grafana_security:
@@ -12,3 +13,7 @@
         access: proxy
         url: 'http://prometheus:9090'
         basicAuth: false
+    grafana_dashboards:
+      - dashboard_id: 1860
+      revision_id: 16
+      datasource: prometheus

@@ -1,0 +1,15 @@
+---
+- name: Copy grafana dashboard
+  copy:
+    src: /data/grafana/choupettor.json
+    dest: /var/lib/grafana/dashboards/choupettor.json
+    owner: grafana
+    group: grafana
+    mode: u=wr,g=wr,o=r
+- name: Copy prometheus files
+  copy:
+    src: /data/prometheus/recording.rules
+    dest: /etc/prometheus/rules/recording.rules
+    owner: root
+    group: prometheus
+    mode: u=wr,g=r,o=r
